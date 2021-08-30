@@ -19,6 +19,7 @@ pipeline {
         stage('Testing') {
             steps {
                 sh "curl http://localhost:3000"
+                sh "npm test"
                 echo " Testing Passed"
             }
         }
