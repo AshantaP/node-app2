@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Runnning-Container') { 
             steps {
-                sh "docker run -d -p 3000:3000 --name node-app examplenode-app"
+                sh "docker run -d -p 3000:3000 --name node-app examplenode"
             }
         }
         stage('Testing') {
