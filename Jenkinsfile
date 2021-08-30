@@ -19,12 +19,13 @@ pipeline {
         stage('Testing') {
             steps {
                 sh "curl http://localhost:3000"
-                sh "Testing Passed"
+                echo " Testing Passed"
             }
         }
         stage('Deploy') {
             steps {
                 sh "curl http://localhost:3000"
+                echo "Server is up! & Running"
             }
         }
     }
