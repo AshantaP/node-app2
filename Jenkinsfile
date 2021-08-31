@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'Docker_Host' } 
+    agent { label 'docker-machine' } 
     stages {
         stage('Git-Clone') { 
             steps {
