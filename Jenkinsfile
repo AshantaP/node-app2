@@ -13,6 +13,7 @@ pipeline {
         }
         stage('Runnning-Container') { 
             steps {
+                sh 'docker rm $(docker stop $(docker ps -a -q --filter ancestor=examplenode --format="{{.ID}}"))'
                 sh "docker run -d -p 3000:3000 --name node-app examplenode"
             }
         }
